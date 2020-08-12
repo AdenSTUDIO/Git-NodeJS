@@ -1,11 +1,9 @@
 $(document).ready(function () {
-    if ($('#chat-msg') != '') {
-
-        $('#send-btn').click(function () {
+    $('#send-btn').click(function () {
+        if ($('#chat-msg') != '') {
             socket.emit('send-Amsg', $('#chat-msg').val());
-        })
-
-    }
+        }
+    })
 })
 
 socket.on('chat-Adata', function (data) {

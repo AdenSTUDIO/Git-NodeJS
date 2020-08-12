@@ -8,10 +8,10 @@ var http = require('http').createServer(app); // GITHUB Commit
 var io = require('socket.io')(http);
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(__dirname + '/views/index.html');
 });
 app.get('/admin', (req, res) => {
-    res.sendFile(__dirname + '/views/admin.html');
+  res.sendFile(__dirname + '/views/admin.html');
 });
 
 io.on('connection', (socket) => {

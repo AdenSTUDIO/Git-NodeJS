@@ -21,11 +21,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('send-Imsg', (data) => {
-    console.log('User MSG: ' + data);
     io.sockets.emit('chat-Idata', data);
   });
   socket.on('send-Amsg', (data) => {
-    console.log('Admin MSG: ' + data);
     io.sockets.emit('chat-Adata', data);
   });
 });

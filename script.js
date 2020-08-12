@@ -2,9 +2,6 @@ var app = require('express')();
 var http = require('http').createServer(app); // GITHUB Commit
 var io = require('socket.io')(http);
 
-app.use(app.static('public'));
-app.use('/v', app.static('views'));
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
